@@ -1,8 +1,17 @@
+import java.time.LocalDateTime;
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Comparator;
 import java.util.HashMap;
+import java.util.HashSet;
+import java.util.IntSummaryStatistics;
 import java.util.List;
 import java.util.Map;
+import java.util.Optional;
+import java.util.Set;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+import java.util.stream.StreamSupport;
 
 class Solutions{
     public static void reverseString(String s){
@@ -187,19 +196,89 @@ public class Main{
        //Solutions.checkPrime(99);
        //Solutions.palindromeOrNot("sasasd");
        //Solutions.countNumOfChars("sandeep");
-       List<Integer> lists = Arrays.asList(2,3,4,1,35,56,1,8,9);
-       int[] nums = {6,4,2,18,5};
+       List<Integer> lists = Arrays.asList(2,2,3,4,1,3,25,1,8,9);
+       int[] num = {6,4,2,18,23,5};
+       
+
+        List<String> names = Arrays.asList("amar", "shreya", "sonu", "naveen");
+        List<String> fullNames = Arrays.asList("Alice Johnson", "Bob Harris",
+"Charlie Lou");
+List<List<Integer>> nestedNumbers = Arrays.asList(Arrays.asList(1, 2),
+Arrays.asList(3, 4, 5));
+
        //Solutions.secondhighestMinorMax(lists);
        //Solutions.checkArmstrong(158);
        //Solutions.indexOfNumsToAddUptoTarget(lists, 5);
        //Solutions.sortString("zebra, jack, mango, pets");
        //Solutions.goodString("sandep");
-       Solutions.bubbleSort(nums);
-        
-        }
+       //Solutions.bubbleSort(nums);
+
+
+       //Stream coding questions
+
+
+       //lists.stream().filter(n -> n%2==0).toList().forEach(s-> System.out.println(s));
+    //    int  maxNum = lists.stream().mapToInt(n-> n).max().getAsInt();
+    //    System.out.println(maxNum);
+        // int sum = lists.stream().mapToInt(n->n).sum();
+        // System.out.println(sum);
+        //names.stream().filter(n-> n.startsWith("s")).toList().forEach(s-> System.out.println(s));
+
+        //names.stream().map(n-> n.toUpperCase()).toList().forEach(s-> System.out.println(s));
+
+        //lists.stream().sorted(Comparator.naturalOrder()).toList().forEach(s-> System.out.println(s));
+
+        // long count = lists.stream().count();
+        // System.out.println(count);
+        //lists.stream().distinct().toList().forEach(s-> System.out.println(s));
+
+        // int sum = lists.stream().reduce(0, (a,b)-> a+b);
+        // System.out.println(sum);
+
+        // Optional<Integer> findany = lists.stream().findAny();
+        // System.out.println(findany.get());
+        //fullNames.stream().map(n-> n.split(" ")[0]).toList().forEach(s-> System.out.println(s));
+        // Boolean res = lists.stream().noneMatch(n -> n<0);
+        // System.out.println(res);
+        // int ff = lists.stream().findFirst().get();
+        // System.out.println(ff);
+
+    //     List<Integer> list1 = Arrays.asList(1, 2, 3);
+    //     List<Integer> list2 = Arrays.asList(4, 5, 6);
+
+    //    Stream.of(list1, list2).flatMap(List::stream).toList().forEach(s->System.out.println(s));
+    //lists.stream().peek(n-> System.out.println(n)).toList();
+    //lists.stream().limit(4).toList().forEach(s-> System.out.println(s));
+    // lists.stream().skip(2)
+    // .toList().forEach(s-> System.out.println(s));
+
+    //lists.stream().collect(Collectors.toSet()).forEach(s-> System.out.println(s));
+// IntSummaryStatistics stats = lists.stream().mapToInt(Integer::intValue).summaryStatistics();
+// System.out.println(stats);
+        //ists.stream().map(n-> String.valueOf(n)).filter(n-> n.startsWith("2")).toList().forEach(s-> System.out.println(s));
+        // Set<Integer> newSet = new HashSet<>();
+        // lists.stream().filter(n-> !(newSet.add(n))).toList().forEach(s-> System.out.println(s));
+        // String input = "Java articles are Awesome";
+        // char c1 = input.chars().mapToObj(c-> (char) c).filter(c -> input.indexOf(c)!=input.lastIndexOf(c)).findFirst().get();
+        // System.out.println(c1);
+
+// Set<Integer> sets = new HashSet<>();
+//        boolean res =  Arrays.stream(nums).anyMatch(n -> !sets.add(n));
+//        System.out.println(res);
+
+
+// LocalDateTime localdate = LocalDateTime.now();
+// System.out.println(localdate);
+
+lists.stream().map(n -> Math.pow(n, 3)).filter(s-> s>50).toList().forEach(s-> System.out.println(s));
+
+
+
       
         
     }
+
+}
 
 
 
